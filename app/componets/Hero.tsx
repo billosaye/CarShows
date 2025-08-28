@@ -32,7 +32,7 @@ const Hero = () => {
             className="object-contain w-full h-full"
           />
 
-          {/* <div className="hero__image-overlay"/> */}
+          <div className="hero__image-overlay"/>
         </div>
       </div>
     </div>
