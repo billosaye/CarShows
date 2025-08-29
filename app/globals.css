@@ -45,3 +45,34 @@ body {
 .footer__copyrights-link {
   @apply flex-1 flex sm:justify-end justify-center max-sm:mt-4 gap-10;
 }
+
+
+.home__filter-container {
+  @apply flex justify-start flex-wrap items-center gap-2;
+}
+
+.home__filters {
+  @apply mt-12 w-full flex justify-between items-center flex-wrap gap-5;
+}
+
+.home__text-container {
+  @apply flex flex-col items-start justify-start gap-y-2.5 text-gray-900;
+}
+
+
+.searchbar {
+  @apply flex items-center justify-start max-sm:flex-col w-full relative max-sm:gap-4 max-w-3xl;
+}
+
+.padding-x {
+  @apply sm:px-16 px-6;
+}
+
+.padding-y {
+  @apply py-4;
+}
+
+.searchbar__item {
+  @apply flex-1 max-sm:w-full flex justify-start items-center relative;
+}
+
