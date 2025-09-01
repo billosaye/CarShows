@@ -1,10 +1,18 @@
+import { fetchCars } from "@/utils";
 import CustomFilter from "./componets/CustomFilter";
 import Hero from "./componets/Hero";
 import SearchBar from "./componets/SearchBar";
+import CarCard from "./components/CarCard";
 
-export default function Home() {
+export default async function Home() {
+  const allCars = await fetchCars();
+
+  console.log(allCars);
+
+  const isDataEmpty = !Array.isArray(allCars) || allCars.length < 1 || !allCars;
+
   return (
-    <main>
+    <main className="overflow-hidden">
       <Hero />
       <div className="mt-20 padding-x padding-y max-width" id="discover">
         <div className="home__text-container">
@@ -13,16 +21,28 @@ export default function Home() {
         </div>
 
         <div className="home__filters">
-          
-            <SearchBar />
-          </div>
-          <div className="home__filter-container">
-            <CustomFilter title="fuel"  />
-            <CustomFilter title="year"  />
-
-          </div>
+          <SearchBar />
         </div>
-      
+        <div className="home__filter-container">
+          <CustomFilter title="fuel" />
+          <CustomFilter title="year" />
+        </div>
+
+        {!isDataEmpty ? (
+          <section>
+            <div className="home__cars-wrapper">
+              {allCars?.map((car) => (
+                <CarCard car={car} />
+              ))}
+            </div>
+          </section>
+        ) : (
+          <div className="home__error-container">
+            <h2 className="text-black text-xl font-bold ">Opps, no results</h2>
+            <p>{allCars?.message}</p>
+          </div>
+        )}
+      </div>
     </main>
   );
 }
