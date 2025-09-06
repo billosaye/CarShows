@@ -3,8 +3,9 @@
 import { CarProps } from "@/types";
 import { calculateCarRent } from "@/utils";
 import Image from "next/image";
-import CustomButtton from "./CustomButtton";
+
 import { useState } from "react";
+import { CustomButtton } from "./Index";
 
 interface CarCardProps {
   car: CarProps;
@@ -65,13 +66,17 @@ const CarCard = ({ car }: CarCardProps) => {
         </div>
         <div>
                    <div className="car-card__btn-container">
-          <CustomButtton
+        <CustomButtton
             title='View More'
             containerStyles='w-full py-[16px] rounded-full bg-primary-blue'
             textStyles='text-white text-[14px] leading-[17px] font-bold'
             rightIcon='/right-arrow.svg'
             handleClick={() => setIsOpen(true)}
           />
+
+
+
+
         </div>
         </div>
 
