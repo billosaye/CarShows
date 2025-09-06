@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import { CarProps } from "@/types";
 import { calculateCarRent } from "@/utils";
@@ -6,20 +6,17 @@ import Image from "next/image";
 
 import { useState } from "react";
 import { CustomButtton } from "./Index";
+import CarDetails from "./CarDetails";
 
 interface CarCardProps {
   car: CarProps;
 }
 
-
-
 const CarCard = ({ car }: CarCardProps) => {
   const { make, model, year, transmission, drive, cylinders } = car;
   const carRent = calculateCarRent(cylinders, year);
 
-    const [isOpen, setIsOpen] = useState(false);
-
-
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div className="car-card group">
@@ -64,24 +61,20 @@ const CarCard = ({ car }: CarCardProps) => {
             <p className="car-card__icon-text">{year} Model</p>
           </div>
         </div>
-        <div>
-                   <div className="car-card__btn-container">
-        <CustomButtton
-            title='View More'
-            containerStyles='w-full py-[16px] rounded-full bg-primary-blue'
-            textStyles='text-white text-[14px] leading-[17px] font-bold'
-            rightIcon='/right-arrow.svg'
+        <div className="car-card__btn-container">
+          <CustomButtton
+            title="View More"
+            containerStyles="w-full py-[16px] rounded-full bg-primary-blue"
+            textStyles="text-white text-[14px] leading-[17px] font-bold"
+            rightIcon="/right-arrow.svg"
             handleClick={() => setIsOpen(true)}
           />
-
-
-
-
         </div>
-        </div>
-
-
       </div>
+
+      {/* Car Details Modal */}
+      <CarDetails isOpen={isOpen} closeModal={() => setIsOpen(false)} car={car} />
+
     </div>
   );
 };
