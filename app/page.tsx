@@ -1,7 +1,7 @@
 import { fetchCars } from "@/utils";
-import CustomFilter from "./componets/CustomFilter";
-import Hero from "./componets/Hero";
-import SearchBar from "./componets/SearchBar";
+import CustomFilter from "./components/CustomFilter";
+import Hero from "./components/Hero";
+import SearchBar from "./components/SearchBar";
 import CarCard from "./components/CarCard";
 
 export default async function Home() {
