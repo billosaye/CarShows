@@ -1,4 +1,4 @@
-export interface CustomButttonProps {
+export interface CustomButtonProps {
   title: string;
   containerStyles?: string;
   handleClick?: () => void;

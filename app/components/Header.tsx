@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import CustomButtton from './CustomButtton'
+import CustomButton from './CustomButton'
 
 const Header = () => {
   return (
@@ -11,7 +11,7 @@ const Header = () => {
                 <Image src="/logo.svg" alt='logo' width={118} height={18} className='object-contain'/>
             
             </Link>
-            <CustomButtton title="Sign In" btnType="button" containerStyles="text-primary-blue rounded-full bg-white min-w-[130px]"/>
+            <CustomButton title="Sign In" btnType="button" containerStyles="text-primary-blue rounded-full bg-white min-w-[130px]"/>
         </nav>
 
     </header>

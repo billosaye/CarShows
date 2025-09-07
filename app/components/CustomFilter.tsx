@@ -1,8 +1,15 @@
 import React from 'react'
 
-const CustomFilter = () => {
+interface CustomFilterProps {
+  title: string;
+}
+
+const CustomFilter = ({ title }: CustomFilterProps) => {
   return (
-    <div>CustomFilter</div>
+    <div className="custom-filter">
+      <h3 className="text-lg font-semibold">{title}</h3>
+      {/* Filter implementation would go here */}
+    </div>
   )
 }
 

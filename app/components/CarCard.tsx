@@ -7,7 +7,7 @@ import { CarHeader } from "./CarCard/components/CarHeader";
 import { CarPrice } from "./CarCard/components/CarPrice";
 import { CarImage } from "./CarCard/components/CarImage";
 import { CarSpecs } from "./CarCard/components/CarSpecs";
-import { CustomButtton } from "./Index";
+import { CustomButton } from "./Index";
 import CarDetails from "./CarDetails";
 
 
@@ -32,7 +32,7 @@ const CarCard = ({ car }: CarCardProps) => {
           highway_mpg={highway_mpg}
         />
         <div className="car-card__btn-container">
-          <CustomButtton
+          <CustomButton
             title="View More"
             containerStyles="w-full py-[16px] rounded-full bg-primary-blue"
             textStyles="text-white text-[14px] leading-[17px] font-bold"

@@ -8,8 +8,6 @@ import CarCard from "./components/CarCard";
 export default async function Home() {
   const allCars = await fetchCars();
 
- 
-
   const isDataEmpty = !Array.isArray(allCars) || allCars.length < 1 || !allCars;
 
   return (
@@ -33,14 +31,13 @@ export default async function Home() {
           <section>
             <div className="home__cars-wrapper">  
               {allCars?.map((car) => (
-                <CarCard car={car} />
+                <CarCard key={`${car.make}-${car.model}-${car.year}`} car={car} />
               ))}
             </div>
           </section>
         ) : (
           <div className="home__error-container">
-            <h2 className="text-black text-xl font-bold ">Opps, no results</h2>
-            
+            <h2 className="text-black text-xl font-bold ">Oops, no results</h2>
           </div>
         )}
       </div>
