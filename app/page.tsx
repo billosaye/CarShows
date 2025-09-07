@@ -4,10 +4,11 @@ import Hero from "./components/Hero";
 import SearchBar from "./components/SearchBar";
 import CarCard from "./components/CarCard";
 
+
 export default async function Home() {
   const allCars = await fetchCars();
 
-  console.log(allCars);
+ 
 
   const isDataEmpty = !Array.isArray(allCars) || allCars.length < 1 || !allCars;
 
@@ -39,7 +40,7 @@ export default async function Home() {
         ) : (
           <div className="home__error-container">
             <h2 className="text-black text-xl font-bold ">Opps, no results</h2>
-            <p>{allCars?.message}</p>
+            
           </div>
         )}
       </div>

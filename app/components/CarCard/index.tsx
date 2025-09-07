@@ -3,13 +3,12 @@
 import { useState } from "react";
 import { CarProps } from "@/types";
 import { calculateCarRent } from "@/utils";
-import { CarHeader } from "./CarCard/components/CarHeader";
-import { CarPrice } from "./CarCard/components/CarPrice";
-import { CarImage } from "./CarCard/components/CarImage";
-import { CarSpecs } from "./CarCard/components/CarSpecs";
-import { CustomButtton } from "./Index";
-import CarDetails from "./CarDetails";
-
+import { CustomButtton } from "../Index";
+import CarDetails from "../CarDetails";
+import { CarHeader } from "./components/CarHeader";
+import { CarPrice } from "./components/CarPrice";
+import { CarImage } from "./components/CarImage";
+import { CarSpecs } from "./components/CarSpecs";
 
 interface CarCardProps {
   car: CarProps;
