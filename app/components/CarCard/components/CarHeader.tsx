@@ -5,6 +5,6 @@ interface CarHeaderProps {
 
 export const CarHeader = ({ make, model }: CarHeaderProps) => (
   <div className="car-card__content">
-    <h2>{make} {model}</h2>
+    <h2 >{make} {model}</h2>
   </div>
 );
